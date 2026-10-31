@@ -1,6 +1,6 @@
 # Contributing
 
-Additions to this repository are topic notes on the learning path in [README.md](README.md).
+Additions to this repository are topic notes on the learning path in [README.md](README.md), or a daily digest note under `docs/posts/`.
 
 ## Add a note
 
@@ -10,6 +10,10 @@ Additions to this repository are topic notes on the learning path in [README.md]
 - Write from sources you can link. A short paraphrase is enough. Skip long copies of books, paywalled posts, or other copyrighted text.
 - Leave out phone numbers, private email addresses, and real-name contact lines.
 - Leave out secrets, API keys, and private candidate data.
+
+## Daily digest
+
+Daily notes are not learning-path chapters. Add them under `docs/posts/` as described in [Daily engineering digest](README.md#daily-engineering-digest). Review uses the [daily-post template](.github/PULL_REQUEST_TEMPLATE/daily-post.md). Leave the learning-path folders unchanged. Keep `status: draft` until a person has reviewed the note, then set `status: published`.
 
 ## Propose a new topic
 
@@ -22,7 +26,7 @@ Open an issue or a pull request that:
 ## Pull requests
 
 1. Fork the repository and create a branch.
-2. Keep the diff to markdown unless you are changing the file check.
+2. Keep the diff to markdown unless you are changing the file check or the Pages site under `docs/`.
 3. From the repository root, run `python3 .github/check_docs.py`.
 4. Open a pull request against `main` and name the topic you changed.
 

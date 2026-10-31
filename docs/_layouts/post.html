@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<article class="note">
+  {% if page.status == "published" %}
+  <header>
+    <p class="meta">
+      <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.tags.size > 0 %}
+    <p class="tagline">
+      <span class="label">标签</span>
+      {% for tag in page.tags %}{% unless forloop.first %} · {% endunless %}{{ tag }}{% endfor %}
+    </p>
+    {% endif %}
+  </header>
+  <div class="body">
+    {{ content }}
+  </div>
+  {% if page.sources.size > 0 %}
+  <section class="sources" aria-labelledby="sources-heading">
+    <h2 id="sources-heading">来源</h2>
+    <ul>
+      {% for source in page.sources %}
+      <li><a href="{{ source }}">{{ source }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  {% else %}
+  <h1>{{ page.title | default: "未命名草稿" }}</h1>
+  <p class="stub">这篇札记还是草稿，没有放进公开索引，正文也不在这里展示。</p>
+  {% endif %}
+  <p class="back"><a href="{{ '/' | relative_url }}">返回索引</a></p>
+</article>

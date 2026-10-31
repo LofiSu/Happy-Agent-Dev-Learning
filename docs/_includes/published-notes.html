@@ -1,0 +1,21 @@
+{::nomarkdown}
+{% assign pool = site.pages | where_exp: "item", "item.path contains 'posts/'" %}
+{% assign notes = pool | where: "status", "published" | sort: "date" | reverse %}
+{% if notes.size == 0 %}
+<p class="empty">已发布的札记会按日期列在这里，新的在前。status 为 <code>draft</code> 的稿子不会出现在这张列表上。</p>
+{% else %}
+<ul class="notes">
+  {% for note in notes %}
+  <li>
+    <time datetime="{{ note.date | date: '%Y-%m-%d' }}">{{ note.date | date: "%Y-%m-%d" }}</time>
+    <div>
+      <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+      {% if note.tags.size > 0 %}
+      <p class="tagline">{% for tag in note.tags %}{% unless forloop.first %} · {% endunless %}{{ tag }}{% endfor %}</p>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{:/nomarkdown}

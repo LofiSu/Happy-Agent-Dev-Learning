@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:type" content="{% if page.status == 'published' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta name="theme-color" content="#f4f0e6">
+  {% if page.status and page.status != "published" %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip" href="{% if page.url == '/' or page.url == '/index.html' %}#site-title{% else %}#content{% endif %}">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-lab">LoomLab</span>
+      <span class="brand-slash" aria-hidden="true">/</span>
+      <span class="brand-name">Happy Agent</span>
+    </a>
+    {% if page.url == "/" or page.url == "/index.html" %}
+    <h1 id="site-title" class="brand-zh">每日工程札记</h1>
+    {% else %}
+    <p class="brand-zh">每日工程札记</p>
+    {% endif %}
+    <p class="brand-en">{{ site.tagline_en }}</p>
+    <nav aria-label="站点">
+      <a href="{{ '/' | relative_url }}"{% if page.url == "/" or page.url == "/index.html" %} aria-current="page"{% endif %}>札记</a>
+      <a href="{{ site.repository_url }}#learning-path">学习路径</a>
+    </nav>
+  </header>
+  <main id="content">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <p>原创短记，附来源。学习路径仍在仓库根目录。</p>
+    <p>
+      <a href="{{ site.repository_url }}">仓库</a>
+      ·
+      <a href="{{ site.repository_url }}/blob/main/LICENSE">MIT License</a>
+    </p>
+  </footer>
+</body>
+</html>
