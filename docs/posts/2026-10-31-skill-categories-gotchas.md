@@ -5,7 +5,7 @@ date: 2026-10-31
 sources:
   - https://claude.dev/blog/lessons-from-building-claude-code-how-we-use-skills/
   - https://code.claude.com/docs/en/skills
-status: draft
+status: published
 tags:
   - agents
   - skills
