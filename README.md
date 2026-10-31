@@ -36,6 +36,9 @@ Agent/Multi-Agent/什么是MutilAgent.md
 Agent/Multi-Agent/MutilAgent的架构.md
 Agent/Evaluate/readme.md
 Deploy and Optimis/readme.md
+docs/_config.yml
+docs/index.md
+docs/posts/
 ```
 
 ## How to use this with a coding agent
@@ -64,6 +67,28 @@ Other public repositories on the same GitHub account. The learning path above st
 - [recruiting-skills](https://github.com/LofiSu/recruiting-skills) — Agent Skills that enrich public author profiles from an arXiv paper, or screen a local index by graduation year and paper thresholds.
 - [LLM-NoteBook](https://github.com/LofiSu/LLM-NoteBook) — longer notes from Transformer basics through RAG and agents, plus interview prep.
 - [Agent_Kimi_ClaudeCode](https://github.com/LofiSu/Agent_Kimi_ClaudeCode) — a short setup walkthrough for Claude Code with the Kimi K2 API.
+
+## Daily engineering digest
+
+GitHub Pages serves the daily notes from [`docs/`](docs/index.md). The learning-path folders at the repository root stay as they are.
+
+A note is a Markdown file in [`docs/posts/`](docs/posts/_template.md). The front matter has `title`, `date` (`YYYY-MM-DD`, unquoted), `sources` (a list of URLs), `tags`, and `status`. Name the file `YYYY-MM-DD-short-slug.md`, and use that same date in `date`.
+
+1. Open the pull request while the note is still a draft: `status: draft`. Choose the [daily-post template](.github/PULL_REQUEST_TEMPLATE/daily-post.md) (`?template=daily-post.md` on the compare page).
+2. A person reviews it. The wording has to be original, the citations have to match `sources`, and the note has to leave out personal email addresses, QQ numbers, phone numbers, personal blogs, and any other private data.
+3. After that review, set `status: published` and merge into `main`.
+
+The public index lists notes with `status: published` only, newest first. A draft stays in the folder, stays off that index, and its page does not render the note body.
+
+### Enable GitHub Pages
+
+The site is stock Jekyll, configured in [`docs/_config.yml`](docs/_config.yml). There is no Pages workflow in this repository. GitHub's built-in builder is the one to use:
+
+1. Open **Settings → Pages**.
+2. Under **Build and deployment**, choose **Deploy from a branch**.
+3. Choose branch **`main`** and folder **`/docs`**, then save.
+
+An admin has to save that once. Saving it does not transfer repository ownership. The site address is `https://lofisu.github.io/Happy-Agent-Dev-Learning/`. It stays dark until those settings are saved and the first build finishes. The notes are still in `docs/` on `main` either way.
 
 ## Contributing
 

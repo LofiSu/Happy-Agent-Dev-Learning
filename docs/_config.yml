@@ -1,0 +1,43 @@
+# Stock GitHub Pages Jekyll. Source is /docs on branch main.
+# Settings → Pages → Deploy from a branch → main → /docs.
+# No Pages workflow: the built-in builder is enough.
+# Do not add plugins outside the GitHub Pages allow-list.
+
+title: "LoomLab · Happy Agent"
+description: "LoomLab / Happy Agent 每日工程札记。原创短记，附来源，不搬原文。"
+tagline_en: "Original notes with citations, not copied text."
+lang: "zh-CN"
+repository_url: "https://github.com/LofiSu/Happy-Agent-Dev-Learning"
+
+url: "https://lofisu.github.io"
+baseurl: "/Happy-Agent-Dev-Learning"
+timezone: "Etc/UTC"
+encoding: "utf-8"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: "posts"
+      type: pages
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
