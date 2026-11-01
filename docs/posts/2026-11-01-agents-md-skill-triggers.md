@@ -9,7 +9,7 @@ tags:
   - skills
   - agents-md
   - openai
-status: draft
+status: published
 ---
 
 OpenAI 工程博客写了他们怎么用 Codex 维护 Agents SDK（Python / TypeScript）两个活跃开源仓：仓库政策放在 `AGENTS.md`，可复用流程收成 `.agents/skills/` 下的 repo-local skills，需要时再挂 Codex GitHub Action。结果不是「多写几段提示词」，而是把验证、发版检查、PR 交接变成可重复的工作流。
