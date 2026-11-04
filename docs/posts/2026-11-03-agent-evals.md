@@ -4,7 +4,7 @@ title: "给 agent 写评测：先把「做对了」定义清楚"
 date: 2026-11-03
 sources:
   - https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents
-status: draft
+status: published
 tags:
   - agents
   - evals

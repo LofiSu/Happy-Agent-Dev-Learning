@@ -4,7 +4,7 @@ title: "模型变强之后，该删指令了"
 date: 2026-11-04
 sources:
   - https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra
-status: draft
+status: published
 tags:
   - agents
   - skills

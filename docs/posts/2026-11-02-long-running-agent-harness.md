@@ -4,7 +4,7 @@ title: "长跑 agent 真正的坑：每个新会话都从零开始"
 date: 2026-11-02
 sources:
   - https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
-status: draft
+status: published
 tags:
   - agents
   - harness
