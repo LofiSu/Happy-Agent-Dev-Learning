@@ -4,7 +4,7 @@ title: "别再跳过所有审批：Claude Code auto mode 怎么拦越权"
 date: 2026-11-06
 sources:
   - https://www.anthropic.com/engineering/claude-code-auto-mode
-status: draft
+status: published
 tags:
   - agents
   - safeguards
