@@ -4,7 +4,7 @@ title: "常驻 agent 要先拆控制面，再加硬边界"
 date: 2026-11-13
 sources:
   - https://developers.openai.com/blog/securing-persistent-agents-like-openclaw-at-openai
-status: draft
+status: published
 tags:
   - agents
   - security
