@@ -4,7 +4,7 @@ title: "只把沙箱放进来还不够"
 date: 2026-11-15
 sources:
   - https://claude.com/resources/articles/self-hosted-claude-managed-agents
-status: draft
+status: published
 tags:
   - agents
   - harness
