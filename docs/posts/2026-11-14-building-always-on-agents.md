@@ -4,7 +4,7 @@ title: "常驻 agent 并不一直开着"
 date: 2026-11-14
 sources:
   - https://claude.com/resources/articles/building-always-on-agents
-status: draft
+status: published
 tags:
   - agents
   - harness
